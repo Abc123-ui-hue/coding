@@ -1,0 +1,144 @@
+.hero-structure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Helper for background images */
+.bento-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Top Hero Grid */
+.hero-bento {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-md);
+    height: 600px;
+}
+
+.bento-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.main-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+}
+
+.sub-item {
+    flex: 1;
+    padding: 2rem;
+}
+
+.bento-content {
+    max-width: 400px;
+}
+
+.bento-content h1 {
+    font-size: 4rem;
+    line-height: 1;
+    color: white;
+    /* Adjusted for image contrast if needed, image in design is light though. Design has white text on green. */
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.main-item .bento-content h1 {
+    color: white;
+    /* Assuming the image is the tennis court one which is green */
+}
+
+.bento-content p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.bento-content h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+/* Inspirations Section */
+.inspirations-bento {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    gap: var(--spacing-md);
+    height: 400px;
+}
+
+.inspiration-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: var(--spacing-lg);
+}
+
+.inspiration-header h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.inspiration-header p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.square-item {
+    position: relative;
+}
+
+.bento-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.bento-overlay h3 {
+    color: white;
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+@media (max-width: 1024px) {
+    .hero-bento {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .bento-stack {
+        flex-direction: row;
+        height: 300px;
+    }
+
+    .main-item {
+        height: 500px;
+    }
+
+    .inspirations-bento {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .square-item {
+        height: 400px;
+    }
+}

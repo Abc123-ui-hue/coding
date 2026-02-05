@@ -1,0 +1,99 @@
+.portal-hub-container {
+    max-width: 1000px;
+    margin: 6rem auto;
+    padding: 0 var(--spacing-lg);
+    text-align: center;
+}
+
+.portal-header {
+    margin-bottom: 4rem;
+}
+
+.portal-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.portal-header p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+.portal-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.portal-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.portal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-primary);
+}
+
+.portal-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.portal-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.portal-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.portal-card-meta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.portal-card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.portal-card-badge.danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.portal-footer {
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .portal-hub-container {
+        margin: 4rem auto;
+    }
+}

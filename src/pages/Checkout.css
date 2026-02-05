@@ -1,0 +1,130 @@
+.checkout-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+}
+
+.checkout-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.checkout-grid .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.place-order-btn {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: opacity 0.2s;
+}
+
+.place-order-btn:hover {
+    opacity: 0.9;
+}
+
+.order-summary-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+.summary-items {
+    margin: 1.5rem 0;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.item-info .item-title {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.item-qty {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.summary-total .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.grand-total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #ddd;
+    font-weight: 800;
+    font-size: 1.25rem !important;
+}
+
+.free {
+    color: #40c057;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary-section {
+        position: static;
+    }
+}
